@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>FORM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#flip").click(function()
+                {
+                  $("#panel").slideDown("slow");  
+                }        
+                );
+            }
+                    );
+            
+            $(document).ready(function()
+            {
+              $("input").focus(function()
+              {
+                  $(this).css("background-color","blue");
+              }      
+                ) ; 
+            }        
+            );
+    
+            $(document).ready(function()
+            {
+                $("button").click(function()
+                {
+                    $("#flip").toggle();
+                }        
+                );
+            }
+                    );
+    
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+            
+        <h1 id="tagline" align="center">JOY'S Confectionery</h1>
+        <div align="center" id="flip"><em><b style="font-size: 60px;">REGISTARTION_FORM</b></em>
+            <div align="center" id="panel">here... it comes
+        <form  name="form1">
+            <br><br><br>NAME: <input id="id1" type="text" name="NM">
+            <br><br><br>EMAIL:<input id="id2" type="text" name="email">
+            <br><br><br>MOB NO:<input id="id3" type="text" name="mobno">
+            <br>Male<input type="radio" name="gender" value="male" checked="">
+            <br><br>Female<input type="radio" name="gender" value="female">
+            <br><br>Other<input type="radio" name="gender" value="other">
+            <br><br><br>DOB<input type="date" name="dob">
+            <br><br><br><input type="submit" value="submit" name="Register">
+        </form>
+        </div>
+        </div>
+                <button id="hd">HIDE FORM</button>
+        
+    </body>
+</html>
